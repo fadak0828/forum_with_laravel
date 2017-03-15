@@ -5,7 +5,7 @@
     <div class="col-md-9">
       <article>
         @include('articles.partial.article', ['article' => $article])
-
+        @include('attachments.partials.list', ['attachments' => $article->attachments])
         <p>
           {!! markdown($article->content) !!}
         </p>

@@ -40,3 +40,5 @@ Route::get('locale',[
   'uses'=>'HomeController@locale'
 ]);
 Route::resource('articles','ArticlesController');
+
+Route::resource('files','AttachmentsController',['only'=>['store','destroy']]);

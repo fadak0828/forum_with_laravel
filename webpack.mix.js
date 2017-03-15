@@ -21,17 +21,16 @@ mix.js('resources/assets/js/app.js', 'public/js')
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .scripts([
-      '../vendor/jquery/dist/jquery.js',
-	  '../vendor/dropzone/dist/dropzone.js',
-      'app.js'
-    ], 'public/js/app.js')
+      
+	  'resources/assets/vendor/dropzone/dist/dropzone.js'
+    ], 'public/js/all.js')
 	.styles([
-	'../vendor/dropzone/dist/dropzone.css',
-	],'public/css/app.css')
+		'resources/assets/vendor/dropzone/dist/dropzone.css'
+	],'public/css/all.css')
 	.version()
 	.copy("resources/assets/vendor/font-awesome/fonts", "public/build/fonts");
 
-
+//'../vendor/jquery/dist/jquery.js',
 
 /*
 var elixir = require('laravel-elixir');

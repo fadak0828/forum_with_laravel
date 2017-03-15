@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ mix('css/all.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -32,6 +32,7 @@
     @include('layouts.partials.footer')
     <!-- Scripts -->
     <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('js/all.js') }}"></script>
     @yield('script')
 </body>
 </html>
