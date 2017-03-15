@@ -2,6 +2,7 @@
   "name": "forum",
   "devDependencies": {
     "font-awesome": "^4.7.0",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "dropzone": "^4.3.0"
   }
 }

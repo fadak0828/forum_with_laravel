@@ -22,8 +22,12 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .scripts([
       '../vendor/jquery/dist/jquery.js',
+	  '../vendor/dropzone/dist/dropzone.js',
       'app.js'
-    ], 'public/js/all.js')
+    ], 'public/js/app.js')
+	.styles([
+	'../vendor/dropzone/dist/dropzone.css',
+	],'public/css/app.css')
 	.version()
 	.copy("resources/assets/vendor/font-awesome/fonts", "public/build/fonts");
 
