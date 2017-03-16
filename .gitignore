@@ -11,3 +11,4 @@ Homestead.yaml
 /public/js
 /resources/assets/vendor
 *.bak
+/public/attachments

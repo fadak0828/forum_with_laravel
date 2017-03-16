@@ -11,7 +11,6 @@ class ArticlesController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
-        $this->middleware('author:Article',['except'=>['index', 'show']]);
         parent::__construct();
     }
 
@@ -138,14 +137,16 @@ class ArticlesController extends Controller
         //
         $article = Article::with('attachments')->findOrFail($id);
 
+        $this->authorize('delete', $article);
+
         foreach($article->attachments as $attachment) {
             \File::delete(attachment_path($attachment->name));
             $attachment->delete();
         }
 
         $article->attachments()->delete();
-        $article->comments->each(function($comment) { // foreach 로 써도 된다.
-            app(\App\Http\Controllers\CommentsController::class)->recursiveDestroy($comment);
+        $article->comments->each(function($comment){ // foreach 로 써도 된다.
+            app(\App\Http\Controllers\CommentsController::class)->destroy($comment->id);
         });
 
         $article->delete();

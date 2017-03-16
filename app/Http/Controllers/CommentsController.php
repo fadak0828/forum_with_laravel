@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use Illuminate\Http\Request;
 
 class CommentsController extends Controller
@@ -111,10 +112,6 @@ class CommentsController extends Controller
         //
         $comment = Comment::find($id);
         $this->recursiveDestroy($comment);
-
-        if ($request->ajax()) {
-            return response()->json('', 204);
-        }
 
         flash()->success(trans('forum.deleted'));
 

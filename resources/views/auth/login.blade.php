@@ -7,6 +7,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">{{trans('auth.title_login')}}</div>
                 <div class="panel-body">
+                    <a class="btn btn-default btn-block" href="{{ route('session.github.login') }}">
+                      <strong>{!! icon('github') !!} {{ trans('auth.bt_git_login') }}</strong>
+                    </a>
+                    <hr class="divider"/>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -54,8 +58,8 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ trans('auth.bt_login') }}
                                 </button>
-                                <a class="btn btn-default" href="{{ route('session.github.login') }}">
-                                  <strong>{!! icon('github') !!} {{ trans('auth.bt_git_login') }}</strong>
+                                <a class="btn btn btn-default" href="{{ route('register') }}">
+                                    {{ trans('auth.title_register')}}
                                 </a>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ trans('auth.forget_password') }}

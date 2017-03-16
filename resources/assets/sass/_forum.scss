@@ -132,7 +132,7 @@ div.preview__forum {
 
 div.dropzone {
   @extend .form-control;
-  display: none;
+  display: block;
   height: auto;
 }
 

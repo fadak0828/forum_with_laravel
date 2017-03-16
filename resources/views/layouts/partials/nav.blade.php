@@ -25,6 +25,8 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
+                <li><a href="{{ route('articles.index') }}">{{ trans('forum.board') }}</a></li>
+                <li><a href="https://github.com/fadak0828/forum_with_laravel">{{ trans('forum.github_source') }}</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">{{ trans('auth.title_login') }}</a></li>
                     <li><a href="{{ route('register') }}">{{ trans('auth.title_register') }}</a></li>
@@ -39,7 +41,7 @@
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                    Logout
+                                    {{trans('auth.title_logout')}}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
