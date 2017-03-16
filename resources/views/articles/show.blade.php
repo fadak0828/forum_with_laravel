@@ -24,9 +24,13 @@
         </div>
         @endcan
       </article>
-      ...
+
+      <div class="divider">
+        <hr/>
+      </div>
+
       <article>
-        Comment here
+        @include('comments.index')
       </article>
     </div>
   </div>

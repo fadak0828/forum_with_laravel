@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -39,6 +37,9 @@ Route::get('locale',[
   'as'=>'locale',
   'uses'=>'HomeController@locale'
 ]);
+
 Route::resource('articles','ArticlesController');
 
 Route::resource('files','AttachmentsController',['only'=>['store','destroy']]);
+
+Route::resource('comments','CommentsController',['only'=>['store','update','destroy']]);

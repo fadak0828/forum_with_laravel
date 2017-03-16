@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/all.css') }}" rel="stylesheet">
+    @yield('style')
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([

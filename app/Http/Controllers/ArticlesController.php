@@ -11,6 +11,7 @@ class ArticlesController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('author:Article',['except'=>['index', 'show']]);
         parent::__construct();
     }
 
@@ -78,7 +79,16 @@ class ArticlesController extends Controller
         //
         $article = Article::with('comments', 'author')->findOrFail($id);
 
-        return view('articles.show', compact('article'));
+        $commentsCollection = $article->comments()->with('replies','author')
+        ->whereNull('parent_id')->latest()->get();
+
+
+        return view('articles.show', [
+          'article'         => $article,
+          'comments'        => $commentsCollection,
+          'commentableType' => Article::class,
+          'commentableId'   => $article->id
+        ]);
     }
 
     /**
@@ -132,6 +142,11 @@ class ArticlesController extends Controller
             \File::delete(attachment_path($attachment->name));
             $attachment->delete();
         }
+
+        $article->attachments()->delete();
+        $article->comments->each(function($comment) { // foreach 로 써도 된다.
+            app(\App\Http\Controllers\CommentsController::class)->recursiveDestroy($comment);
+        });
 
         $article->delete();
 

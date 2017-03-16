@@ -14,4 +14,6 @@ return [
     */
 
     'not_found_description' => '글 목록이 없습니다.',
+    'forbidden'=>'찾을 수 없습니다.',
+    'forbidden_description'=>'찾을 수가 없어요ㅠ',
 ];
