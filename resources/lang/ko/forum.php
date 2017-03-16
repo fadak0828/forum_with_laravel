@@ -18,5 +18,5 @@ return [
   'comment_delete_confirm'=>'정말 댓글을 삭제 하시겠습니까?',
   'comment_delete_success'=>'삭제되었습니다! 3초후 재로딩 됩니다.',
   'github_source'=>'소스보기',
-  'board'=>'게시판'
+  'board'=>'포럼'
 ];

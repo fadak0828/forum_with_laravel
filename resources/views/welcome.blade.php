@@ -10,6 +10,7 @@
         background-color: #fff;
         color: #636b6f;
         font-family: 'Raleway', sans-serif;
+        line-height: 1.6;
         font-weight: 100;
         height: 100vh;
         margin: 0;

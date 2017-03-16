@@ -18,4 +18,12 @@ return [
     'title_login'=>'로그인',
     'title_logout'=>'로그아웃',
     'title_register'=>'회원가입',
+    'email'=>'이메일 주소',
+    'password'=>'비밀번호',
+    'remember_me'=>'자동 로그인',
+    'forget_password'=>'비밀번호를 잊으셨나요?',
+    'bt_git_login'=>'깃허브로 로그인',
+    'bt_login'=>'로그인',
+    'confirm_password'=>'비밀번호 확인',
+    'name'=>'사용할 이름',
 ];

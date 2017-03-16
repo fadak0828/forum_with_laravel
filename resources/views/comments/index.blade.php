@@ -4,7 +4,10 @@
   @endif
 
   @forelse($comments as $comment)
-    @include('comments.partials.comment',['parentId'=>$comment->id])
+    @include('comments.partials.comment',[
+      'parentId'=>$comment->id,
+      'isReply'=>false
+    ])
   @empty
   @endforelse
 </div>

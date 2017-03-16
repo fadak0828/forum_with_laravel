@@ -17,4 +17,13 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'title_login'=>'login',
     'title_register'=>'register',
+    'title_logout'=>'logout',
+    'email'=>'Email Address',
+    'password'=>'Password',
+    'remember_me'=>'Remember Me',
+    'forget_password'=>'Forget Password?',
+    'bt_git_login'=>'Login with Github',
+    'bt_login'=>'Login',
+    'confirm_password'=>'Confirm Password',
+    'name'=>'Name',
 ];

@@ -2,10 +2,12 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-// Variables
-@import "variables";
-@import "_commons";
-
-// Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../vendor/font-awesome/scss/font-awesome";
+// Variables
+
+@import "commons";
+@import "forum";
+@import "media";
+@import "variables";
+// Bootstrap

@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="row container__forum">
-    <div class="col-md-9">
-      <article>
+    <div class="col-md-8 col-md-offset-2">
+      <article id="article__article" data-id="{{ $article->id }}">
         @include('articles.partial.article', ['article' => $article])
         @include('attachments.partials.list', ['attachments' => $article->attachments])
         <p>
@@ -25,9 +25,7 @@
         @endcan
       </article>
 
-      <div class="divider">
-        <hr/>
-      </div>
+      <hr class="divider"/>
 
       <article>
         @include('comments.index')
